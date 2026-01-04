@@ -20,8 +20,12 @@ The black points and error bars were gathered using aperture photometry on raw i
 
 ## MCMC
 
-(...work in progress...)
+In SEDs like the one in the previous section, we it's expected that the middle hump follows a distribution known as a modified blackbody. Using the data in the SED above, I used MCMC to fit a modified blackbody with 3 free parameters (mass of the object, temperature, and $\beta$, a parameter relating to the opacity of the object). The gray shaded area shows the 1-$\sigma$ posterior spread, and the plot below shows a corner plot of the posterior distribution.
 
 ![](https://github.com/bderieg/bderieg/blob/main/ngc1684_emcee.png)
 
 ## Image Processing (Telescope Data)
+
+Below is an example of data taken with the telescope atop the old physics building at the University of Utah in January 2025 as part of a project to measure the brightness of a recent supernova. The left image is the raw, unreduced data from the telescope, and the right image shows a calibrated (science-ready) image. Specifically, multiple frames were combined to improve the signal-to-noise ratio, then a calibration frames were applied to remove any gradients, vignetting, and dark noise (i.e., noise from the pixels themselves). All the code for this can be found in the bderieg/sn_data_reduction repository.
+
+![](https://github.com/bderieg/bderieg/blob/main/before_after.png)
